@@ -1,0 +1,17 @@
+Introduction to Python
+Variables and Data Types
+Conditional Statements and Logical Expressions
+Loops (for and while)
+Functions
+Strings and String Operations
+Lists and List Operations
+Dictionaries and Dictionary Operations
+Tuples and Sets
+File Input and Output
+Exception Handling
+Modules and Packages
+Working with Databases
+Object-Oriented Programming (OOP)
+API Integration and Web Scraping
+Multithreading and Asynchronous Programming
+Testing and Debugging

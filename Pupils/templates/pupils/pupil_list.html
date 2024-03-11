@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .button-green {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-green:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        button {
+            margin-top: 10px;
+            font-size: 16px;
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div style="max-width: 800px; margin: 0 auto;">
+        <h1>O'quvchilar Ro'yxati:</h1>
+
+        <ul class="pupil-list">
+            {% for pupil in pupils %}
+                <li>
+                    <a class="button-green" href="/pupils/{{ pupil.id }}/">{{ pupil.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2">No</th>
+                    <th rowspan="2">FIO</th>
+                    <th colspan="3">Baholash mezonlari bo'yicha ballar</th>
+                    <th rowspan="2">Jami</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pupil in pupils %}
+                    <tr>
+                        <td>{{ pupil.id }}</td>
+                        <td><a href="/pupils/{{ pupil.id }}/">{{ pupil.name }}</a></td>
+                        <td>{{ pupil.bir }}</td>
+                        <td>{{ pupil.iki }}</td>
+                        <td>{{ pupil.uch }}</td>
+                        <td>{{ pupil.jami }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <button onclick="window.location.href = '/themes/';">⟵ Mavzularga qaytish</button>
+    </div>
+</body>
+</html>

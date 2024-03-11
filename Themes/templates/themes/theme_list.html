@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            margin-top: 10px;
+            font-size: 16px;
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div style="max-width: 800px; margin: 0 auto;">
+        <h1>☰ Otilgan darsliklar: </h1>
+
+        <table>
+            <tr>
+                <th>Dars</th>
+                <th>Mavzu</th>
+            </tr>
+            {% for lesson in lessons %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ lesson }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <button onclick="window.location.href = '/pupils/';">OQUVCHILAR GA OTISH ➠</button>
+    </div>
+</body>
+</html>

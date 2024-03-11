@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        .button {
+            margin-top: 10px;
+            font-size: 16px;
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>OQUVCHI: {{ pupil.name }}</h1>
+
+    <table>
+        <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>JAMI:</th>
+        </tr>
+        <tr>
+            <td>{{ pupil.bir }}</td>
+            <td>{{ pupil.iki }}</td>
+            <td>{{ pupil.uch }}</td>
+            <td>{{ pupil.jami }}</td>
+        </tr>
+    </table>
+
+    <button onclick="window.location.href = '/pupils/';" class="button">⟸ Oquvchilarga qaytish</button>
+    <br>
+    <button onclick="window.location.href = '/themes/';" class="button">⟸ Mavzularga qaytish</button>
+
+ 
